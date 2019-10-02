@@ -1,0 +1,11 @@
+{
+  "name": "qa-lbd",
+  "version": "1.0.0",
+  "description": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
