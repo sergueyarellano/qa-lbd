@@ -4,8 +4,18 @@
   "description": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cucumber-js test/features --require test/steps --require test/support --tags @github",
+    "watch:test": "nodemon -e js,json,feature --exec \"npm test\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "5.1.0",
+    "request": "2.88.0",
+    "request-promise": "4.2.4",
+    "standard": "14.3.1"
+  },
+  "dependencies": {
+    "nodemon": "1.19.3"
+  }
 }
