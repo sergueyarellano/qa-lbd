@@ -11,6 +11,7 @@ git init
 - `git init` // start git repo
 - `git status` // see the changes since last commit
 - `git add` // add changes to stage (before commit)
+- `git commit` // add changes to stage (before commit)
 
 ## Create Node app
 
@@ -30,3 +31,5 @@ https://semver.org/
 
 In order to integrate new features in the source branch, we need some "status checks" before integrating those features, to make sure that no erroneous code is mistakenly merged.
 
+## Cucumber JS
+https://github.com/cucumber/cucumber-js
