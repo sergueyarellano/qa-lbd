@@ -1,14 +1,26 @@
 
-Feature: sample man
-   Sample feature description
-  Scenario: failed request to unexistent port
-    Given I make a "GET" request to "http://localhost:3333"
+Feature: posts in the blog
+  Sample feature 
+  Scenario: succesful create a new post in the blog
+    Given the "body"
+      | title  | foo |
+      | body   | bar |
+      | userId | 1   |
+    And the "headers"
+      | Content-type   | application/json; charset=UTF-8 |
+    When I make a "POST" request to "https://jsonplaceholder.typicode.com/posts"
+    Then I receive a 201 http code with body
+      | body   | bar       |
+      | id     | foo       |
+      | title  | watev     |
+      | userId | duude wtf |
 
-  @github  
-  Scenario: succesful request to github
-    Given I make a "GET" request to "https://www.google.com"
+  Scenario: succesful retrieve all the posts
+    And the "headers"
+      | Content-type   | application/json; charset=UTF-8 |
+    When I make a "GET" request to "https://jsonplaceholder.typicode.com/posts"
     Then I receive a 200 http code with body
-    |user_id| xxx|
-  
-  Scenario: succesful request to github with POST
-    Given I make a "POST" request to "https://www.google.com"
+      | body   | bar       |
+      | id     | foo       |
+      | title  | watev     |
+      | userId | duude wtf |
