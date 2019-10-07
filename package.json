@@ -4,8 +4,10 @@
   "description": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test/features --require test/steps --require test/support --tags @github",
-    "watch:test": "nodemon -e js,json,feature --exec \"npm test\""
+    "test": "cucumber-js test/features --require test/steps --require test/support",
+    "unit": "tap test/*.test.js",
+    "watch:int": "nodemon -e js,json,feature --exec \"npm test\"",
+    "watch:unit": "nodemon -e js,json,feature --exec \"npm run unit\""
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +15,8 @@
     "cucumber": "5.1.0",
     "request": "2.88.0",
     "request-promise": "4.2.4",
-    "standard": "14.3.1"
+    "standard": "14.3.1",
+    "tap": "14.6.9"
   },
   "dependencies": {
     "nodemon": "1.19.3"
